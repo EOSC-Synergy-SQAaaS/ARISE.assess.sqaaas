@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/nomad-coe/ARISE git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-olivine-weasel.sh
-        container: qc.acc_gummy-cerulean-setter
+        - /usr/bin/env sh .sqa/script.homely-goldenrod-coral.sh
+        container: qc.acc_woolly-alizarin-donkey
   QC.Doc:
     repos:
       github.com/nomad-coe/ARISE find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-amaranth-kakapo.sh
-        container: qc.doc_skinny-scarlet-mongrel
+        - /usr/bin/env sh .sqa/script.fuzzy-aqua-barracuda.sh
+        container: qc.doc_shabby-flax-duck
       github.com/nomad-coe/ARISE git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-ivory-uakari.sh
-        container: qc.doc_dorky-olive-millipede
+        - /usr/bin/env sh .sqa/script.blurry-coral-abyssinian.sh
+        container: qc.doc_lousy-amaranth-rottweiler
       github.com/nomad-coe/ARISE markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-corn-spider.sh
-        container: qc.doc_clammy-indigo-bandicoot
+        - /usr/bin/env sh .sqa/script.goopy-brown-mammoth.sh
+        container: qc.doc_muzzy-malachite-owl
       github.com/nomad-coe/ARISE restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-bistre-harrier.sh
-        container: qc.doc_shabby-scarlet-echidna
+        - /usr/bin/env sh .sqa/script.skinny-burgundy-ocelot.sh
+        container: qc.doc_nerdy-mustard-ray
   QC.Lic:
     repos:
       github.com/nomad-coe/ARISE licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-lavender-hyena.sh
-        container: qc.lic_tasty-cream-bison
+        - /usr/bin/env sh .sqa/script.muzzy-rose-cougar.sh
+        container: qc.lic_scaly-cerulean-malamute
   QC.Sec:
     repos:
       github.com/nomad-coe/ARISE bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-tomato-opossum.sh
-        container: qc.sec_seedy-azure-seahorse
+        - /usr/bin/env sh .sqa/script.surly-emerald-gerbil.sh
+        container: qc.sec_snappy-vermilion-turtle
   QC.Sty:
     repos:
       github.com/nomad-coe/ARISE flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-olivine-cockroach.sh
-        container: qc.sty_homely-orchid-skunk
+        - /usr/bin/env sh .sqa/script.squirrely-olive-bear.sh
+        container: qc.sty_smelly-indigo-oyster
       github.com/nomad-coe/ARISE jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-seashell-fowl.sh
-        container: qc.sty_dorky-heliotrope-hare
+        - /usr/bin/env sh .sqa/script.flaky-green-turtle.sh
+        container: qc.sty_gummy-crimson-crocodile
   QC.Ver:
     repos:
       github.com/nomad-coe/ARISE get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-rust-camel.sh
-        container: qc.ver_lanky-pink-badger
+        - /usr/bin/env sh .sqa/script.leaky-tangerine-akbash.sh
+        container: qc.ver_snappy-red-eel
 timeout: 1800
