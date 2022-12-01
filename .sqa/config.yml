@@ -1,0 +1,66 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/nomad-coe/ARISE:
+      branch: main
+      repo: https://github.com/nomad-coe/ARISE
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/nomad-coe/ARISE git:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-olivine-weasel.sh
+        container: qc.acc_gummy-cerulean-setter
+  QC.Doc:
+    repos:
+      github.com/nomad-coe/ARISE find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-amaranth-kakapo.sh
+        container: qc.doc_skinny-scarlet-mongrel
+      github.com/nomad-coe/ARISE git:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-ivory-uakari.sh
+        container: qc.doc_dorky-olive-millipede
+      github.com/nomad-coe/ARISE markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-corn-spider.sh
+        container: qc.doc_clammy-indigo-bandicoot
+      github.com/nomad-coe/ARISE restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-bistre-harrier.sh
+        container: qc.doc_shabby-scarlet-echidna
+  QC.Lic:
+    repos:
+      github.com/nomad-coe/ARISE licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-lavender-hyena.sh
+        container: qc.lic_tasty-cream-bison
+  QC.Sec:
+    repos:
+      github.com/nomad-coe/ARISE bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-tomato-opossum.sh
+        container: qc.sec_seedy-azure-seahorse
+  QC.Sty:
+    repos:
+      github.com/nomad-coe/ARISE flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-olivine-cockroach.sh
+        container: qc.sty_homely-orchid-skunk
+      github.com/nomad-coe/ARISE jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-seashell-fowl.sh
+        container: qc.sty_dorky-heliotrope-hare
+  QC.Ver:
+    repos:
+      github.com/nomad-coe/ARISE get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-rust-camel.sh
+        container: qc.ver_lanky-pink-badger
+timeout: 1800
